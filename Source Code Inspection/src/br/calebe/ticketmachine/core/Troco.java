@@ -8,7 +8,7 @@ import java.util.Iterator;
  */
 class Troco {
 
-    protected PapelMoeda[] papeisMoeda;
+    protected PapelMoeda[] papeisMoeda; // criar variavel no diagrama de classes 
 
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
