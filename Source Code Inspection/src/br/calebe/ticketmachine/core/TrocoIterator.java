@@ -9,7 +9,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author 
+ * @author anavitoriallena
  */
 public class TrocoIterator implements Iterator<PapelMoeda> {
 
