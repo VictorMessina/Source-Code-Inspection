@@ -47,39 +47,4 @@ class Troco {
     public Iterator<PapelMoeda> getIterator() {
         return new TrocoIterator(this);
     }
-
-    class TrocoIterator implements Iterator<PapelMoeda> {
-
-        protected Troco troco;
-
-        public TrocoIterator(Troco troco) {
-            this.troco = troco;
-        }
-
-        @Override
-        public boolean hasNext() {
-            for (int i = 6; i >= 0; i--) {
-                if (troco.papeisMoeda[i] != null) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        @Override
-        public PapelMoeda next() {
-            PapelMoeda ret =  null;
-            for (int i = 6; i >= 0; i--) {
-                if (troco.papeisMoeda[i] == null) {
-                    ret = troco.papeisMoeda[i];
-                }
-            }
-            return ret;
-        }
-
-        @Override
-        public void remove() {
-            next();
-        }
-    }
 }
